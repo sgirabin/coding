@@ -2,30 +2,26 @@ public class Solution {
     
 
     public int majorityElement(int[] nums) {
+
         Arrays.sort(nums);
-        
-        int max=0;
-        int count=1;
-        int index=1;
-        int element=nums[index-1];
-        
-        while(index<nums.length) {
-            if (nums[index]==nums[index-1]){
-                count++;
-            }else{
-                if (count>max) {
-                    element=nums[index-1];
-                    max=count;
+
+        int element=nums[0];
+        int max=1;        
+        int current=nums[0];
+        int total=1;
+        for (int i=1;i<nums.length;i++) {
+            if (nums[i]==current) {
+                total=total+1;
+                if (total>max) {
+                    element=nums[i];
+                    max=total;
                 }
-                count=1;
+            }else{
+                current=nums[i];
+                total=1;
             }
-            index++;
         }
-        
-       if (count>max) {
-            element=nums[index-1];
-        }                
-            
+                   
         return element;
     }
 
