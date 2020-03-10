@@ -1,3 +1,7 @@
+package algorithms.P001;
+
+import java.util.*;
+
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
         
@@ -19,7 +23,6 @@ public class Solution {
         }
         
         int[] result = new int[indexes.size()];
-        Iterator iterator = indexes.iterator();
         for (int i=0;i<indexes.size();i++) {
             result[i]=indexes.get(i);
         }
