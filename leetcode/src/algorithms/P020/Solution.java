@@ -1,4 +1,4 @@
-package algorithms.P026;
+package algorithms.P020;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
