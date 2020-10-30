@@ -1,3 +1,5 @@
+package algorithms.P026;
+
 class Solution {
     public int removeDuplicates(int[] nums) {
         
